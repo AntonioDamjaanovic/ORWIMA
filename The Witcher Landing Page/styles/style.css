@@ -1,4 +1,82 @@
+/* Reset default margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*NAVIGATION PART*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+/*Clearfix so background works on ul element*/
+ul::after { 
+    content: ""; 
+    display: table; 
+    clear: both; 
+}
+
+nav li {
+    /*float: left;*/
+    border-right: 1px solid black;
+}
+
+nav li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#buy_now {
+    background-color: #e28743;
+    /*float: right;*/
+    border-right: none;
+}
+
+/*MAIN PART*/
 #game_pictures img{
     width: 400px;
     height: 400px;
 }
+
+
+/*FOOTER PART*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+
+footer p {
+    margin: 0 auto;
+    max-width: 600px;
+    color: white;
+}
+
+#homepage_logos {
+    margin-top: 20px;
+}
+
+#homepage_logos a {
+    margin: 0 10px;
+}
+
+#homepage_logos img {
+    vertical-align: middle;
+}
+
+
