@@ -2,6 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 /*NAVIGATION PART*/
@@ -10,7 +11,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #222222;
     position: fixed;
     top: 0;
     width: 100%;
@@ -36,6 +37,7 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 24px;
 }
 
 li a:hover {
@@ -48,16 +50,36 @@ li a:hover {
 }
 
 /*MAIN PART*/
+
+/* Style for the witcher background */
+main {
+    background-color: #141414;
+}
+
+main p, h1, li {
+    color: white;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
 #game_pictures img{
     width: 400px;
     height: 400px;
 }
 
 
+
+
 /*FOOTER PART*/
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: black;
 }
 
@@ -65,10 +87,11 @@ footer p {
     margin: 0 auto;
     max-width: 600px;
     color: white;
+    font-size: 15px;
 }
 
 #homepage_logos {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #homepage_logos a {
