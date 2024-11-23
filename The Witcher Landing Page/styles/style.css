@@ -3,9 +3,17 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Arial, sans-serif; 
+    background-color: #121212; /* Dark theme background */ 
+    color: #ffffff;
 }
 
-/*NAVIGATION PART*/
+/* NAVIGATION PART */
+nav {
+    width: 100%;
+    background-color: #222222;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -18,7 +26,8 @@ nav ul {
     display: flex; 
     justify-content: center;
 }
-/*Clearfix so background works on ul element*/
+
+/* Clearfix so background works on ul element */
 ul::after { 
     content: ""; 
     display: table; 
@@ -26,16 +35,14 @@ ul::after {
 }
 
 nav li {
-    /*float: left;*/
     border-right: 1px solid black;
 }
 
 nav li a {
     display: block;
-    padding: 8px;
+    padding: 8px 14px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 24px;
 }
@@ -43,40 +50,104 @@ nav li a {
 li a:hover {
     background-color: #111;
 }
+
 #buy_now {
     background-color: #e28743;
-    /*float: right;*/
     border-right: none;
 }
 
-/*MAIN PART*/
-
-/* Style for the witcher background */
+/* MAIN PART */
 main {
     background-color: #141414;
-}
-
-main p, h1, li {
-    color: white;
+    padding-top: 60px; /* Adjust for the fixed nav height */
 }
 
 .container {
     width: 70%;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
     background-color: #1e1e1e;
+    border-radius: 10px; /* For rounded corners */
 }
 
-#game_pictures img{
-    width: 400px;
-    height: 400px;
+#intro {
+    text-align: center;
 }
 
+#witcher_logo img {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+}
 
+#home_buttons {
+    text-align: center;
+    margin-top: 20px;
+}
 
+#home_buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #e28743;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-/*FOOTER PART*/
+#home_buttons button:hover {
+    background-color: #d0753a;
+}
+
+#welcome_part {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#welcome_part h1 {
+    margin-bottom: 20px;
+}
+
+#welcome_part p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#welcome_part ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#welcome_part ul li {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+#games_list {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#games_list h1 {
+    margin-bottom: 20px;
+}
+
+#game_pictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping if there are more images */
+    gap: 20px; /* Add gap between images */
+}
+
+#game_pictures img {
+    width: 300px; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+/* FOOTER PART */
 footer {
     text-align: center;
     padding: 10px;
@@ -85,7 +156,7 @@ footer {
 
 footer p {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 650px;
     color: white;
     font-size: 15px;
 }
@@ -101,5 +172,3 @@ footer p {
 #homepage_logos img {
     vertical-align: middle;
 }
-
-
