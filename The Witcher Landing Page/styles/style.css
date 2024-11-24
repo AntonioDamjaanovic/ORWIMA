@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif; 
     /*background-color: #121212; /* Dark theme background */ 
-    color: #ffffff;
+    color: silver;
 }
 
 body {
@@ -38,6 +38,7 @@ nav ul {
     top: 0;
     display: flex; 
     justify-content: center;
+    border: 2px solid black;
 }
 
 /* Clearfix so background works on ul element */
@@ -53,8 +54,8 @@ nav li {
 
 nav li a {
     display: block;
-    padding: 8px 29.45px;
-    color: white;
+    padding: 8px 29.1px;
+    color: silver;
     text-align: center;
     text-decoration: none;
     font-size: 22px;
@@ -67,6 +68,10 @@ li a:hover {
 #buy_now {
     background-color: #e28743;
     border-right: none;
+}
+
+#buy_now a {
+    color: white;
 }
 
 /* MAIN PART */
@@ -82,9 +87,9 @@ li a:hover {
 }
 
 #witcher_logo img {
-    width: 200px;
+    width: 300px;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 #home_buttons {
@@ -95,16 +100,25 @@ li a:hover {
 #home_buttons button {
     padding: 10px 20px;
     margin: 10px;
-    background-color: #e28743;
-    border: none;
-    color: white;
+    background-color: #d4a132;
     cursor: pointer;
-    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+#home_buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #home_buttons button:hover {
-    background-color: #d0753a;
+    background-color: #e28743;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 
 #welcome_part {
     padding: 60px 20px;
@@ -121,12 +135,18 @@ li a:hover {
     line-height: 1.6;
 }
 
-#welcome_part ul {
+.quotes ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     list-style-type: none;
     padding: 0;
+    margin-left: 25px;
+    max-width: 800px;
 }
 
-#welcome_part ul li {
+.quotes ul li {
     margin: 10px 0;
     font-style: italic;
 }
