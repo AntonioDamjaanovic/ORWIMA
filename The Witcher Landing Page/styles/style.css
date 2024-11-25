@@ -1,183 +1,258 @@
-/* Reset default margins and padding */
-body, html {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif; 
-    /*background-color: #121212; /* Dark theme background */ 
-    color: silver;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-image: url('../images/background_witcher.webp'); /* Putanja do slike */
-    background-size: cover; /* Slika će se prilagoditi kako bi pokrila cijelu pozadinu */
-    background-position: center; /* Centriranje slike */
-    background-repeat: no-repeat; /* Sprječava ponavljanje slike */
-    background-attachment: fixed; /* Slika ostaje fiksirana pri skrolanju */
-}
-
-/* NAVIGATION PART */
-.container_nav {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    margin-right: 21%;
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(46, 47, 54, 0.7),rgba(17, 17, 17, 0.7)), url('../images/home_background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
 nav {
-    background-color: #222222;
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #222222;
-    position: fixed;
-    top: 0;
-    display: flex; 
-    justify-content: center;
-    border: 2px solid black;
+nav img {
+    width: 200px;
+    margin-left: 0;
 }
 
-/* Clearfix so background works on ul element */
-ul::after { 
-    content: ""; 
-    display: table; 
-    clear: both; 
+.nav-links {
+    flex: 1;
+    text-align: right;
 }
 
-nav li {
-    border-right: 1px solid black;
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
 
-nav li a {
-    display: block;
-    padding: 8px 29.1px;
-    color: silver;
-    text-align: center;
+.nav-links ul li a {
+    color: black;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 19px;
+    font-weight: 600;
 }
 
-li a:hover {
-    background-color: #111;
+.nav-links ul li a:hover {
+    color: orange;
 }
 
-#buy_now {
-    background-color: #e28743;
-    border-right: none;
-}
-
-#buy_now a {
-    color: white;
-}
-
-/* MAIN PART */
-.container {
-    width: 62%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #1e1e1e;
-}
-
-#intro {
+.text-box {
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
 }
 
-#witcher_logo img {
-    width: 300px;
-    display: block;
-    margin: 10px auto;
-}
-
-#home_buttons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#home_buttons button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #d4a132;
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-}
-
-#home_buttons a {
-    text-decoration: none;
-    color: white;
+.text-box h1 {
+    font-size: 55px;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 18px;
 }
 
-#home_buttons button:hover {
-    background-color: #e28743;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 30px;
 }
 
+.intro-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
 
-#welcome_part {
-    padding: 60px 20px;
+.intro-btn:hover {
+    border: 1px solid orange;
+    background: orange;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #383838;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa {
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+
+    }
+}
+
+/*  QUOTES PART */
+.quotes {
+    width: 80%;
+    margin: auto;
     text-align: center;
+    padding-top: 100px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 600;
 }
 
-#welcome_part h1 {
-    margin-bottom: 20px;
+.quotes p {
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
-#welcome_part p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+p {
+    color: black;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-size: 20px;
 }
 
-.quotes ul {
+.row {
+    margin-top: 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
-    list-style-type: none;
-    padding: 0;
-    margin-left: 25px;
-    max-width: 800px;
 }
 
-.quotes ul li {
-    margin: 10px 0;
-    font-style: italic;
+.quote-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
 }
 
-#games_list {
-    padding: 60px 20px;
+.quote-col h3 {
     text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 20px;
 }
 
-#games_list h1 {
-    margin-bottom: 20px;
+.quote-col p {
+    font-style: italic;
+    text-transform: capitalize;
 }
 
-#game_pictures {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping if there are more images */
-    gap: 20px; /* Add gap between images */
+.quote-col:hover {
+    box-shadow: 0 0 20px 0px rgb(0,0,0,0.2);
 }
 
-#game_pictures img {
-    width: 300px; /* Adjust the width of the images */
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.games {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.games h1 {
+    margin-bottom: 3%;
+}
+
+.games-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.games-col img {
+    width: 100%;
+    height: 100%;
     border: 4px solid black;
+    display: block;
+    border-radius: 10px;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(38, 38, 38,0.9);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
 }
 
 /* FOOTER PART */
 footer {
+    width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 30px 0;
     background-color: black;
 }
 
@@ -188,14 +263,14 @@ footer p {
     font-size: 15px;
 }
 
-#homepage_logos {
+.footer-logos {
     margin-top: 10px;
 }
 
-#homepage_logos a {
+.footer-logos a {
     margin: 0 10px;
 }
 
-#homepage_logos img {
+.footer-logos img {
     vertical-align: middle;
 }
